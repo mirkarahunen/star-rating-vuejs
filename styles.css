@@ -1,0 +1,41 @@
+    #full-stars-example {
+        text-align: center;
+    }
+
+    .rating-group {
+        margin-top: 100px;
+        display: inline-flex;
+    }
+
+    /* hide radio inputs */
+    .rating__input {
+        display: none;
+    }
+    
+    /* set icon padding and size */
+    .rating__label {
+        cursor: pointer;
+        font-size: 50px;
+        height: 50px;
+        width: 50px;
+        position: relative;
+        color: orange;
+    }
+
+    .rating__label::after {
+        pointer-events: none;
+        content: "\2B51";
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        left: 0;
+        
+    }
+
+    /* set following stars grey */
+    .rating__input:checked + .rating__label,
+    .rating__input:checked ~ .rating__label,
+    .rating__label:hover ~ .rating__label { 
+        color: #bbb;  
+    } 
+
