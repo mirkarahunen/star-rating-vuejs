@@ -9,22 +9,22 @@
 </head>
 <body>
     <div id="full-stars-example">
-        <div class="rating-group">
+        <div class="rating-group" :class="['hover-star-' + hoverState, 'stars-given-' + starsGiven]" @mouseleave="removeStarState">
 
-            <label aria-label="1 star" class="rating__label" for="rating3-1" v-on:click="setRating"></label>
-            <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio" ref="starsGiven_1">
+            <label aria-label="1 star" class="rating__label" for="rating3-1" @mouseover="checkStarState"></label>
+            <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio" v-model="starsGiven">
 
-            <label aria-label="2 stars" class="rating__label" for="rating3-2" v-on:click="setRating"></label>
-            <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio" ref="starsGiven_2">
+            <label aria-label="2 stars" class="rating__label" for="rating3-2" @mouseover="checkStarState"></label>
+            <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio" v-model="starsGiven">
 
-            <label aria-label="3 stars" class="rating__label" for="rating3-3" v-on:click="setRating"></label>
-            <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio" ref="starsGiven_3">
+            <label aria-label="3 stars" class="rating__label" for="rating3-3" @mouseover="checkStarState"></label>
+            <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio" v-model="starsGiven">
 
-            <label aria-label="4 stars" class="rating__label" for="rating3-4" v-on:click="setRating"></label>
-            <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio" ref="starsGiven_4">
+            <label aria-label="4 stars" class="rating__label" for="rating3-4" @mouseover="checkStarState"></label>
+            <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio" v-model="starsGiven">
 
-            <label aria-label="5 stars" class="rating__label" for="rating3-5" v-on:click="setRating"></label>
-            <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio" ref="starsGiven_5">
+            <label aria-label="5 stars" class="rating__label" for="rating3-5" @mouseover="checkStarState"></label>
+            <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio" v-model="starsGiven">
         </div>
 
         <p>
