@@ -13,16 +13,16 @@ var stars = new Vue({
                 _this.starsGiven = _this.$refs.starsGiven_1.value
                 //console.log(_this.starsGiven);
             } else if (e.target.nextElementSibling === _this.$refs.starsGiven_2) {
-                _this.starsGiven = 2
+                _this.starsGiven = _this.$refs.starsGiven_2.value
                 //console.log(_this.starsGiven);
             } else if (e.target.nextElementSibling === _this.$refs.starsGiven_3) {
-                _this.starsGiven = 3
+                _this.starsGiven = _this.$refs.starsGiven_3.value
                 //console.log(_this.starsGiven);
             } else if (e.target.nextElementSibling === _this.$refs.starsGiven_4) {
-                _this.starsGiven = 4
+                _this.starsGiven = _this.$refs.starsGiven_4.value
                 //console.log(_this.starsGiven);
             } else if (e.target.nextElementSibling === _this.$refs.starsGiven_5) {
-                _this.starsGiven = 5
+                _this.starsGiven = _this.$refs.starsGiven_5.value
                 //console.log(_this.starsGiven);
             }
         }
