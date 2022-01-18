@@ -25,8 +25,6 @@ var stars = new Vue({
                 _this.starsGiven = 5
                 //console.log(_this.starsGiven);
             }
-//Recipe search and recipe detail page layouts?
-         
         }
     }
     
