@@ -1,41 +1,83 @@
-    #full-stars-example {
-        text-align: center;
-    }
+#full-stars-example {
+    text-align: center;
+}
 
-    .rating-group {
-        margin-top: 100px;
-        display: inline-flex;
-    }
+.rating-group {
+    margin-top: 100px;
+    display: inline-flex;
+    position: relative;
+}
 
-    /* hide radio inputs */
-    .rating__input {
-        display: none;
-    }
+/* hide radio inputs */
+.rating__input {
+    position: absolute;
+    visibility: hidden;
+    margin: 0;
+}
+
+/* set icon padding and size */
+.rating__label {
+    cursor: pointer;
+    font-size: 50px;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    color: #bbb;
+}
+
+.rating__label::after {
+    pointer-events: none;
+    content: "\2B51";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 0;
     
-    /* set icon padding and size */
-    .rating__label {
-        cursor: pointer;
-        font-size: 50px;
-        height: 50px;
-        width: 50px;
-        position: relative;
-        color: orange;
-    }
+}
 
-    .rating__label::after {
-        pointer-events: none;
-        content: "\2B51";
-        position: absolute;
-        height: 50px;
-        width: 50px;
-        left: 0;
-        
-    }
+/* set following stars orange */
+.rating-group.hover-star-1 label[aria-label="1 star"],
+.rating-group.stars-given-1 label[aria-label="1 star"] {
+    color: orange;
+}
 
-    /* set following stars grey */
-    .rating__input:checked + .rating__label,
-    .rating__input:checked ~ .rating__label,
-    .rating__label:hover ~ .rating__label { 
-        color: #bbb;  
-    } 
+.rating-group.hover-star-2 label[aria-label="1 star"],
+.rating-group.stars-given-2 label[aria-label="1 star"],
+.rating-group.hover-star-2 label[aria-label="2 stars"],
+.rating-group.stars-given-2 label[aria-label="2 stars"] {
+    color: orange;
+}
+
+.rating-group.hover-star-3 label[aria-label="1 star"],
+.rating-group.stars-given-3 label[aria-label="1 star"],
+.rating-group.hover-star-3 label[aria-label="2 stars"],
+.rating-group.stars-given-3 label[aria-label="2 stars"],
+.rating-group.hover-star-3 label[aria-label="3 stars"],
+.rating-group.stars-given-3 label[aria-label="3 stars"] {
+    color: orange;
+}
+
+.rating-group.hover-star-4 label[aria-label="1 star"],
+.rating-group.stars-given-4 label[aria-label="1 star"],
+.rating-group.hover-star-4 label[aria-label="2 stars"],
+.rating-group.stars-given-4 label[aria-label="2 stars"],
+.rating-group.hover-star-4 label[aria-label="3 stars"],
+.rating-group.stars-given-4 label[aria-label="3 stars"],
+.rating-group.hover-star-4 label[aria-label="4 stars"],
+.rating-group.stars-given-4 label[aria-label="4 stars"] {
+    color: orange;
+}
+
+.rating-group.hover-star-5 label[aria-label="1 star"],
+.rating-group.stars-given-5 label[aria-label="1 star"],
+.rating-group.hover-star-5 label[aria-label="2 stars"],
+.rating-group.stars-given-5 label[aria-label="2 stars"],
+.rating-group.hover-star-5 label[aria-label="3 stars"],
+.rating-group.stars-given-5 label[aria-label="3 stars"],
+.rating-group.hover-star-5 label[aria-label="4 stars"],
+.rating-group.stars-given-5 label[aria-label="4 stars"],
+.rating-group.hover-star-5 label[aria-label="5 stars"],
+.rating-group.stars-given-5 label[aria-label="5 stars"] {
+    color: orange;
+}
 

@@ -2,31 +2,26 @@ var stars = new Vue({
     el: "#full-stars-example",
     data: function() {
         return {
-            starsGiven: 0
+            starsGiven: 0,
+            hoverState: 0
         }
     },
     methods: {
-        setRating: function(e) {
-            var _this = this
-
-            if(e.target.nextElementSibling === _this.$refs.starsGiven_1) {
-                _this.starsGiven = _this.$refs.starsGiven_1.value
-                //console.log(_this.starsGiven);
-            } else if (e.target.nextElementSibling === _this.$refs.starsGiven_2) {
-                _this.starsGiven = _this.$refs.starsGiven_2.value
-                //console.log(_this.starsGiven);
-            } else if (e.target.nextElementSibling === _this.$refs.starsGiven_3) {
-                _this.starsGiven = _this.$refs.starsGiven_3.value
-                //console.log(_this.starsGiven);
-            } else if (e.target.nextElementSibling === _this.$refs.starsGiven_4) {
-                _this.starsGiven = _this.$refs.starsGiven_4.value
-                //console.log(_this.starsGiven);
-            } else if (e.target.nextElementSibling === _this.$refs.starsGiven_5) {
-                _this.starsGiven = _this.$refs.starsGiven_5.value
-                //console.log(_this.starsGiven);
+        checkStarState: function(e) {
+            if(e.target.ariaLabel == "1 star") {
+                this.hoverState = 1;
+            } else if (e.target.ariaLabel == "2 stars") {
+                this.hoverState = 2;
+            } else if (e.target.ariaLabel == "3 stars") {
+                this.hoverState = 3;
+            } else if (e.target.ariaLabel == "4 stars") {
+                this.hoverState = 4;
+            } else if (e.target.ariaLabel == "5 stars") {
+                this.hoverState = 5;
             }
+        },
+        removeStarState: function() {
+            this.hoverState = 0;
         }
     }
-    
-
 })
